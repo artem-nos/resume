@@ -2,25 +2,109 @@
 <html>
 
 <head>
+    <title>Registration</title>
+
     <style>
-        a {
-            background-color: #f44336;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            margin: 1px;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            border: 50px solid #3cb371;
+            padding: 20px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        input {
+            background-color: #3CBC8D;
             color: white;
+            border-radius: 5px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #3cb371;
+        }
+
+        input:focus {
+            background-color: #3cb371;
+            border: 1px solid #3CBC8D;
+            outline: none;
+        }
+
+        h3 {
+            text-align: center;
+            color: #3cb371;
+        }
+
+        h4 {
+            background-color: #3cb371;
+            color: #ffffff;
             padding: 15px 25px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
         }
+        h4:hover {
+            background-color: #3CBC8D;
+        }
+        a:link {
+            color: #ffffff;
+            text-decoration: none;
+        }
     </style>
+</head>
 
 <body>
 
-    <p>Choose a link:</p>
+    <h3>Create account</h3>
 
-    <p><a href="page.html">Exmp 1</a></p>
-    <p><a href="page2.html">Exmp 2</a></p>
+    <form action="/action_page.php" method="post">
+
+
+        <label for="fname">Lastname:</label><br>
+        <input type="text" id="fname" name="fname" value="" required><br><br>
+        <label for="lname">Name:</label><br>
+        <input type="text" id="lname" name="lname" value="" required><br><br>
+        <label for="midln">Midl name:</label><br>
+        <input type="text" id="midln" name="midln" value="" required><br><br>
+        <label for="birthday">Date of Birth:</label><br>
+        <input type="date" id="birthday" name="birthday" required><br><br>
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            required><br><br>
+        <input type="checkbox" id="mass" name="mass" value="mass">
+        <label for="mass">Check the box if you want to receive SMS</label><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pasport">Attached files:</label><br>
+        <input type="file" id="pasport" name="pasport"><br><br>
+        <label for="pwd">Password (minimum 8 characters):</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <label for="pwd">Password confirmation:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <p>Office closest to you:
+        <p>
+            <input list="office" name="office">
+            <datalist id="office">
+                <option value="123 5th str.">
+                <option value="675 Jon str. ">
+                <option value="789 91th str.">
+            </datalist><br><br>
+            <input type="checkbox" id="agree" name="agree" value="agree">
+            <label for="agree">I agree with the privacy policy</label><br><br>
+        <h4><a href="page.html">Next>></a></h4>
+
+    </form>
 
 </body>
-</head>
 
 </html>
