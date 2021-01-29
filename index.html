@@ -18,7 +18,8 @@
         }
 
         form {
-            width: 100%;
+            position: relative;
+            width: 50%;
             margin: auto;
             border: 50px solid #3cb371;
             padding: 20px;
@@ -63,12 +64,17 @@
         a:link {
             color: #ffffff;
         }
+        @media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+}
     </style>
 </head>
 
 <body>
 
-    <h3>Create account</h3>
+    <h3>Create new account</h3>
 
     <form action="/action_page.php" method="post">
 
